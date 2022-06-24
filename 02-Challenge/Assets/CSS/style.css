@@ -1,0 +1,143 @@
+
+:root {
+  --white: #fff;
+  --black: black;
+  --purple: purple;
+  --orange: orange;
+  --lightblue: lightblue;
+  --border-radius: 50px;
+}
+
+.link{
+  color:var(--lightblue)
+}
+.link:hover{
+  background-color: var(--purple);
+}
+
+#image{
+  background-image:url(../images/The_Land_of_Mist_TradingCard.jpg);
+  background-repeat:none;
+  background-size:cover;
+  
+}
+  
+img{
+  height:100%;
+  width:100%;
+}
+
+img:hover{
+  object-fit:cover;
+  flex-grow: flex;
+}
+
+.image{
+  height:200px;
+  width:200px;
+  display: inline;
+  object-fit: cover;
+  object-fit: contain;
+}
+
+body {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+header {
+  padding: 70px;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+}
+
+nav {
+  display: flex;
+  background-color: var(--purple);
+  text-align: center;
+}
+
+nav a {
+  color: var(--black);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+footer {
+  width: 100%;
+  bottom: auto;
+  padding: 20px;
+  text-align: center;
+  background: var(--Black);
+  color: var(--black);
+  margin-top: auto;
+}
+
+.section{
+  color:var(--white)
+}
+
+/*.section{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 20px;
+}*/
+
+/*.section{
+display:flex;
+flex-wrap: wrap;  
+display: grid;
+grid-template-columns:(4, 1rem);
+gap: 1em;
+break-inside: avoid;
+page-break-inside: avoid;
+background-color: rgb(207, 232, 220);
+border: 2px solid rgb(79, 185, 227);
+padding: 10px;
+margin: 0 0 1em 0;
+}*/
+
+@media (min-width: 60em){
+  .section{ grid-template-columns: repeat( 4, 1fr); 
+  }
+}
+
+@media (min-width: 40em){
+  .section {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  main,
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 40em) {
+  main,
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
